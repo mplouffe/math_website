@@ -1,6 +1,6 @@
 <h1>Math Website</h1>
 <p align="center">
-  <img src="/documents/screenShot01.png">
+  <img src="/documents/screenShot_01.png">
 </p>
 <p><i>(NOTE: Name is temporary until I can come up with something better.)</i></p>
 
