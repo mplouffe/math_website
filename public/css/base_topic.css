@@ -1,0 +1,35 @@
+#heading {
+    color: #34c0eb;
+    font-size: 34px;
+    width: 50%;
+    font-family: 'Orbitron', sans-serif;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#content {
+    color: #34c0eb;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: #9D17F4;
+    text-decoration: none;
+}
+a:hover {
+    color: #F283D6; 
+}
