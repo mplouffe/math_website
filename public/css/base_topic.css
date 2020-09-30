@@ -70,3 +70,13 @@ a {
 a:hover {
     color: #F283D6; 
 }
+
+.visualization_chunk {
+    margin: auto;
+    width: 100%;
+}
+
+canvas {
+    display: block;
+    margin: auto;
+}
