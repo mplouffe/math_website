@@ -8,6 +8,8 @@ var displayUnitCircle = function(){
     context.fillStyle = "#3CF";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
+    context.fillStyle = "#000";
+
     context.beginPath();
     // y axis
     context.moveTo(128,0);
@@ -16,7 +18,27 @@ var displayUnitCircle = function(){
     context.moveTo(0,128);
     context.lineTo(256,128);
     // unit circle
+    context.moveTo(128+64, 128);
     context.arc(128,128,64,0, 2*Math.PI);
+
+    // hash marks
+    for (let i = 0; i < 7; i++)
+    {
+        if (i % 2 != 0)
+        {
+            continue;
+        }
+        context.moveTo(32 + (32*i), 128-5);
+        context.lineTo(32 + (32*i), 128+5);
+
+        context.fillText(-1.5 + (i*0.5), 32 + (32*i) - 5, 128+20);
+
+        context.moveTo(128-5, 32 + (32*i));
+        context.lineTo(128+5, 32 + (32*i));
+
+        context.fillText(-1.5 + (i*0.5), 128+10, 32 + (32*i) + 5);
+    }
+
     context.stroke();
 }
 
@@ -37,6 +59,7 @@ var displayPythagoras = function(){
     context.moveTo(0,128);
     context.lineTo(256,128);
     // unit circle
+    context.moveTo(128+64, 128);
     context.arc(128,128,64,0, 2*Math.PI);
 
     context.moveTo(128,128);
