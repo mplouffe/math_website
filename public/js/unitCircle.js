@@ -28,22 +28,23 @@ var displayUnitCircle = function(){
         {
             continue;
         }
+        // x-lines
         context.moveTo(32 + (32*i), 128-5);
         context.lineTo(32 + (32*i), 128+5);
-
+        // x-labels
         context.fillText(-1.5 + (i*0.5), 32 + (32*i) - 5, 128+20);
-
+        // y-lines
         context.moveTo(128-5, 32 + (32*i));
         context.lineTo(128+5, 32 + (32*i));
-
-        context.fillText(-1.5 + (i*0.5), 128+10, 32 + (32*i) + 5);
+        // y-labels
+        context.fillText(1.5 - (i*0.5), 128+10, 32 + (32*i) + 5);
     }
 
     context.stroke();
 }
 
-var displayPythagoras = function(){
-    let canvas = document.getElementById("unitCircleViz_02");
+var displayPythagorasOnUnitCircle = function(){
+    let canvas = document.getElementById("unitCircleViz_03");
     canvas.width = 256;
     canvas.height = 256;
     let context = canvas.getContext('2d');
@@ -76,8 +77,38 @@ var displayPythagoras = function(){
     context.fillText("y", 128 + (64*Math.cos(Math.PI/4)) + 5, 128 - (64*Math.cos(Math.PI/4))/2 + 10);
 }
 
+var displayPythagoras = function(){
+    let canvas = document.getElementById("unitCircleViz_02");
+    canvas.width = 256;
+    canvas.height = 256;
+    let context = canvas.getContext('2d');
+
+    context.fillStyle = "#3CF";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    // draw triangle
+    context.moveTo(64, 64);
+    context.lineTo(64, 192);
+    context.lineTo(192, 192);
+    context.lineTo(64, 64);
+
+    // draw right angle indicator
+    context.moveTo(64, 192 - 16);
+    context.lineTo(80, 192 - 16);
+    context.lineTo(80, 192);
+
+    // labels
+    context.font = "13px Consolas";
+    context.fillStyle = "#000";
+    context.fillText("a", 64 - 20, 128 + 10);
+    context.fillText("b", 128 - 10, 192 + 20);
+    context.fillText("c", 128 + 8, 128 - 8); 
+
+    context.stroke();
+}
 
 window.addEventListener('DOMContentLoaded', (event) => {
     displayUnitCircle();
-    displayPythagoras();    
+    displayPythagoras();
+    displayPythagorasOnUnitCircle();    
 });
