@@ -18,8 +18,14 @@
 }
 
 .content_chunk {
+    display: inline-block;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 49%;
+}
+
+.centering_container {
+
 }
 
 #content h2 {
@@ -72,11 +78,21 @@ a:hover {
 }
 
 .visualization_chunk {
+    display: inline-block;
     margin: auto;
-    width: 100%;
+    width: 50%;
 }
 
 canvas {
     display: block;
     margin: auto;
+}
+
+.content_line {
+    display: flex;              /* establish flex container */
+    flex-direction: row;     /* stack flex items vertically */
+    justify-content: center;    /* center items vertically, in this case */
+    align-items: center;        /* center items horizontally, in this case */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

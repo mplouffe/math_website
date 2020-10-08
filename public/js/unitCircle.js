@@ -87,22 +87,22 @@ var displayPythagoras = function(){
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     // draw triangle
-    context.moveTo(64, 64);
-    context.lineTo(64, 192);
+    context.moveTo(192, 64);
     context.lineTo(192, 192);
-    context.lineTo(64, 64);
+    context.lineTo(64, 192);
+    context.lineTo(192, 64);
 
     // draw right angle indicator
-    context.moveTo(64, 192 - 16);
-    context.lineTo(80, 192 - 16);
-    context.lineTo(80, 192);
+    context.moveTo(192, 192 - 16);
+    context.lineTo(176, 192 - 16);
+    context.lineTo(176, 192);
 
     // labels
     context.font = "13px Consolas";
     context.fillStyle = "#000";
-    context.fillText("a", 64 - 20, 128 + 10);
+    context.fillText("a", 192 + 15, 128 + 10);
     context.fillText("b", 128 - 10, 192 + 20);
-    context.fillText("c", 128 + 8, 128 - 8); 
+    context.fillText("c", 128 - 8, 128 - 8); 
 
     context.stroke();
 }
